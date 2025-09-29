@@ -53,18 +53,19 @@ pip install torch torchvision piq matplotlib Pillow
 
 
 If using Google Colab:
-
+```bash
 from google.colab import drive
 drive.mount('/content/drive')
 
 
-🏋️ Training
+
+##**🏋️ Training**
 
 Run training with:
 
 python app.py
 
-Default arguments:
+## **Default arguments:**
 
 epochs=150
 
@@ -74,13 +75,13 @@ lr_g=3e-6 (Generator learning rate)
 
 lr_d=3e-5 (Discriminator learning rate)
 
-Change dataset path inside train():
+**Change dataset path inside train():**
 
 train(data_root='/path/to/your/images', epochs=150, batch_size=16, device='cuda')
 
-📊 Results
+##**📊 Results**
 
-During training:
+**During training:**
 
 Saves before/after images every 10 epochs.
 
@@ -88,11 +89,11 @@ Logs D Loss, G Loss, and Discriminator Accuracy to training_log.csv.
 
 At the end, training progress plot is displayed with loss curves.
 
-Example outputs:
+**Example outputs:**
 
 Input (before) → Enhanced output (after).
 
-🧠 Model Architecture
+##**🧠 Model Architecture**
 Generator (UNet + Transformer)
 
 Encoder: 3 convolutional down-sampling blocks.
@@ -109,7 +110,7 @@ Patch-level classification with spectral normalization.
 
 Outputs real/fake probability maps.
 
-📈 Loss Functions
+**📈 Loss Functions**
 
 Total Generator Loss =
 Adversarial Loss + L1 Loss (×10) + Perceptual Loss (×5) + SSIM Loss (×2) + PSNR Loss (×0.1)
