@@ -66,10 +66,13 @@ drive.mount('/content/drive')
 
 Run training with:
 
+```
 python app.py
+```
 
 ## **Default arguments:**
 
+```
 epochs=150
 
 batch_size=16
@@ -77,10 +80,13 @@ batch_size=16
 lr_g=3e-6 (Generator learning rate)
 
 lr_d=3e-5 (Discriminator learning rate)
+```
 
 **Change dataset path inside train():**
 
+```
 train(data_root='/path/to/your/images', epochs=150, batch_size=16, device='cuda')
+```
 
 ##**📊 Results**
 
