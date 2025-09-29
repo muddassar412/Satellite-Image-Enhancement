@@ -50,13 +50,14 @@ The project combines **transformers, perceptual loss, and adversarial training**
 Install dependencies before running:
 ```bash
 pip install torch torchvision piq matplotlib Pillow
+_________________________________________________________________________________________________________________________________________________________
 
 
 If using Google Colab:
 ```bash
 from google.colab import drive
 drive.mount('/content/drive')
-
+_______________________________________________________________________________________________________________________________________________________
 
 
 ##**🏋️ Training**
