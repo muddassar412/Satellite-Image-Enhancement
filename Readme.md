@@ -24,3 +24,20 @@ The project combines **transformers, perceptual loss, and adversarial training**
 ---
 
 ## 📂 Project Structure
+├── app.py # Training script
+├── README.md # Project documentation
+├── requirements.txt # Dependencies
+├── /result # Training logs and saved models
+│ ├── before/ # Input images (sampled during training)
+│ ├── after/ # Generated images (sampled during training)
+│ ├── training_log.csv # CSV with D/G losses and accuracy
+│ ├── generator.pth # Saved Generator model
+│ └── discriminator.pth # Saved Discriminator model
+
+
+---
+
+## ⚙️ Requirements
+Install dependencies before running:
+```bash
+pip install torch torchvision piq matplotlib Pillow
