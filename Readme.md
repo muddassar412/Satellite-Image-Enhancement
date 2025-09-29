@@ -88,7 +88,7 @@ lr_d=3e-5 (Discriminator learning rate)
 train(data_root='/path/to/your/images', epochs=150, batch_size=16, device='cuda')
 ```
 
-##**📊 Results**
+## **📊 Results**
 
 **During training:**
 
@@ -102,29 +102,29 @@ At the end, training progress plot is displayed with loss curves.
 
 Input (before) → Enhanced output (after).
 
-##**🧠 Model Architecture**
-Generator (UNet + Transformer)
+## **🧠 Model Architecture**
+**Generator (UNet + Transformer)
+**
+**Encoder**: 3 convolutional down-sampling blocks.
 
-Encoder: 3 convolutional down-sampling blocks.
+**Bottleneck**: TransformerBlock (multi-head self-attention + feed-forward).
 
-Bottleneck: TransformerBlock (multi-head self-attention + feed-forward).
+**Decoder**: Upsampling with skip connections + convolutional refinement.
 
-Decoder: Upsampling with skip connections + convolutional refinement.
+**Output**: 3-channel RGB image with sigmoid.
 
-Output: 3-channel RGB image with sigmoid.
-
-Discriminator (PatchGAN)
+**Discriminator (PatchGAN)**
 
 Patch-level classification with spectral normalization.
 
 Outputs real/fake probability maps.
 
-**📈 Loss Functions**
+## **📈 Loss Functions**
 
-Total Generator Loss =
+**Total Generator Loss** =
 Adversarial Loss + L1 Loss (×10) + Perceptual Loss (×5) + SSIM Loss (×2) + PSNR Loss (×0.1)
 
-💾 Saving & Checkpoints
+## 💾 Saving & Checkpoints
 
 Models saved automatically after training in result/:
 
@@ -132,7 +132,7 @@ generator.pth
 
 discriminator.pth
 
-📌 Future Work
+## 📌 Future Work
 
 Multi-scale transformer blocks.
 
@@ -140,11 +140,11 @@ Attention-based discriminator.
 
 Support for multispectral (beyond RGB) satellite images.
 
-✨ Citation
+## ✨ Citation
 
 If you use this code in your research, please cite the repository.
 
-📜 License
+## 📜 License
 
 MIT License. You are free to use and modify with proper attribution.
 
